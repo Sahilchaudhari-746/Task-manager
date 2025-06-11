@@ -30,7 +30,7 @@ const SignInPage = () => {
       localStorage.setItem('userId', data.userId);
 
       toast.success('Login successful!');
-      navigate('/');
+      navigate('/add-task');
         window.location.reload(); // ensure component state resets
     } catch (error) {
       console.error('Sign-in error:', error);
