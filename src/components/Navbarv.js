@@ -7,7 +7,7 @@ function Navbarv() {
 
   const handleSignOut = () => {
     localStorage.clear();
-    navigate('/SignIn');
+    navigate('/');
     window.location.reload();
   };
 
@@ -15,7 +15,7 @@ function Navbarv() {
     <nav className="navbar">
       <div className="navbar-title">Task Manager</div>
       <div className="navbar-links">
-        <Link to="/">Add Task</Link>
+        <Link to="/add-task">Add Task</Link>
         <Link to="/tasks">View Tasks</Link>
         <button onClick={handleSignOut} className="signout-button">
          ⏻
