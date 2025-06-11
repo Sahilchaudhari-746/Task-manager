@@ -32,7 +32,7 @@ const SignUpPage = () => {
       }
 
       toast.success('Account created successfully!');
-      navigate('/SignIn');
+      navigate('/');
     } catch (error) {
       console.error('Error during signup:', error);
       toast.error('Something went wrong. Please try again.');
