@@ -16,9 +16,9 @@ function App() {
         <Router>
               {isAuth && <Navbar />}
             <Routes>
-                <Route path="/" element={<AddTaskPage />} />
+                <Route path="/add-task" element={<AddTaskPage />} />
                 <Route path="/tasks" element={<TaskListPage />} />
-                <Route path="/SignIn" element={<SignInPage />} />
+                <Route path="/" element={<SignInPage />} />
                   <Route path="/SignUp" element={<SignUpPage />} />
             </Routes>
             <ToastContainer />
