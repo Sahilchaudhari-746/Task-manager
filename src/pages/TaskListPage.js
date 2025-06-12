@@ -9,7 +9,7 @@ function TaskListPage() {
         const userId = parseInt(localStorage.getItem("userId"), 10);
         console.log(userId)
         try {
-            const response = await fetch("http://localhost:5000/tasks", {
+            const response = await fetch("https://task-manager-server-two-silk.vercel.app/tasks", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
