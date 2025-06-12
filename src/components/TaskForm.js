@@ -9,7 +9,7 @@ function TaskForm({ onTaskAdded }) {
         if (!taskName) return;
         const userId = parseInt(localStorage.getItem("userId"), 10);
         try {
-            const response = await fetch('http://localhost:5000/tasks', {
+            const response = await fetch('http://localhost:5000/add-tasks', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
