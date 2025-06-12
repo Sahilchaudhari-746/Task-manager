@@ -8,7 +8,7 @@ function TaskItem({ task, onUpdate }) {
     const userId = parseInt(localStorage.getItem("userId"), 10);
     const handleDelete = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/tasks/${task.id}`, {
+            const response = await fetch(`https://task-manager-server-two-silk.vercel.app/tasks/${task.id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ userId }),  // ← send userId
@@ -24,7 +24,7 @@ function TaskItem({ task, onUpdate }) {
 
     const handleUpdate = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/tasks/${task.id}`, {
+            const response = await fetch(`https://task-manager-server-two-silk.vercel.app/tasks/${task.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ task: updatedTask,userId }),
@@ -43,7 +43,7 @@ function TaskItem({ task, onUpdate }) {
 
     const markAsCompleted = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/tasks/${task.id}`, {
+            const response = await fetch(`https://task-manager-server-two-silk.vercel.app/tasks/${task.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ task: task.task, status: true,userId }),
