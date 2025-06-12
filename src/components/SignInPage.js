@@ -12,7 +12,7 @@ const SignInPage = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/auth/signin', {
+      const response = await fetch('https://task-manager-server-two-silk.vercel.app/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
