@@ -67,7 +67,7 @@ function TaskItem({ task, onUpdate }) {
                 </p>
             </div>
             <div className="task-actions-horizontal">
-                <button className="btn update" onClick={() => setIsEditing(true)}>Update</button>
+                <button className="btn update" onClick={() => setIsEditing(true)}  disabled={task.status}>Update</button>
                 <button className="btn delete" onClick={handleDelete}>Delete</button>
                 <button
                     className="btn complete"
