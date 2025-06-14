@@ -18,7 +18,7 @@ const SignUpPage = () => {
     }
 
     try {
-      const response = await fetch('https://task-manager-server-two-silk.vercel.app/signup', {
+      const response = await fetch('https://task-manager-server-two-silk.vercel.app/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
